@@ -1,0 +1,37 @@
+var row=10
+for i in 0...row
+{
+ 
+  if(i<=row)
+  {
+     for _ in stride(from:row,to:i,by:-1)
+     {
+        print(" ",terminator:"")
+     }
+     for _ in 0...i
+     {
+       print("* ",terminator:"")
+     }
+  }
+  if(i==row)
+  {
+     print()
+     for p in 0...row
+     {
+       for _ in 0...p
+       {
+          print(" ",terminator:"")
+       }
+       for _ in stride(from:row,to:p,by:-1)
+       {
+          print("* ",terminator:"")
+       }
+
+      print()
+     }
+    
+    
+  }
+
+  print()
+}
