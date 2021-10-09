@@ -1,0 +1,31 @@
+var arr:[Int]=[10, 5, 10]           
+var temp:[Int]=arr
+var len=arr.count
+
+var max=arr[0]
+
+var smax=arr[0]
+
+for i in 1...arr.count-1
+{
+  if(arr[i]>max)
+  {
+    max=arr[i]
+  }
+}
+
+for i in 1...arr.count-1
+{
+  if(arr[i]>smax && (max != arr[i]))
+  {
+      smax=arr[i]
+  }
+}
+if(max==smax)
+{
+  print("Not Found")
+}
+else
+{
+  print(smax)
+}
