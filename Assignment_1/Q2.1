@@ -1,0 +1,15 @@
+var row=5
+
+for i in 0...row
+{
+  for j in stride(from:row,to:i,by:-1)
+  {
+    print(" ",terminator:"")
+  }
+  var k=i
+  for k in 0...k
+  {
+    print("* ",terminator:"")
+  }
+print()
+}
