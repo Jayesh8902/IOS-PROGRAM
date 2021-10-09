@@ -1,0 +1,36 @@
+// 1
+// 11
+// 121
+// 1331
+// 14641
+
+func generate(numRows: Int) -> [[Int]] {
+        var results = [[Int]]()
+        if (numRows == 0) {
+            return results
+        }
+        for i in 0..<numRows {
+            var currentResults = [Int]()
+            for j in 0...i {
+                if (i > 1 && j > 0 && j < i) {
+                    let value = results[i-1][j] + results[i-1][j-1]
+                    currentResults.append(value)
+                } else {
+                    currentResults.append(1)
+                }
+            }
+            results.append(currentResults)
+        }
+        return results
+    }
+let triangleContent = generate(numRows: 10)
+for i in 0..<triangleContent.count {
+    let row = triangleContent[i]
+    
+    for i in 0..<row.count {
+        let value = row[i]
+        print("\(value) ", terminator:"")
+    }
+
+    print("\n")
+}
