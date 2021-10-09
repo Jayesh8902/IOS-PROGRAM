@@ -1,0 +1,24 @@
+var row=5
+for i in 0...row
+{
+  if(i<row)
+  {
+      for j in 0...i
+      {
+        print("* ",terminator:"")
+      }
+      print()
+  }
+  if(i==row)
+  {
+    for i in 0...row
+    {
+      for j in stride(from:row-1,to:i,by:-1)
+      {
+        print("* ",terminator:"")
+      }
+      print()
+    }
+  }
+
+}
